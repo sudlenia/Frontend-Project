@@ -1,0 +1,11 @@
+.helpful-info {
+  padding-top: 64px;
+  height: 100%;
+}
+
+.helpful-info__content {
+  padding-top: 64px;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+}

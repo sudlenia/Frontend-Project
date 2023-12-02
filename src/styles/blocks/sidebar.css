@@ -1,0 +1,16 @@
+.sidebar {
+  width: 404px;
+  min-height: 576px;
+  height: 100%;
+  border: 1px solid #000;
+  background: #fcffe7;
+  padding: 28px 30px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar__title {
+  font-size: 20px;
+  font-weight: 500;
+}

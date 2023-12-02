@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  color: white;
+}
+
+.list__link {
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+}
+
+.list__item--active {
+  background: #111827;
+  border-radius: 6px;
+}

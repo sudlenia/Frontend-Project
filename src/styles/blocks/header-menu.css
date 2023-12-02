@@ -1,0 +1,23 @@
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header-menu__list {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  color: white;
+}
+
+.header-menu__item {
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+}
+
+.header-menu__item--active {
+  background: #111827;
+  border-radius: 6px;
+}
