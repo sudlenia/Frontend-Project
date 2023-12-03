@@ -1,10 +1,10 @@
 .sidebar-list {
-  margin-top: 16px;
+  padding-top: 16px;
+  padding-left: 10px;
   width: 2340px;
   min-height: 96px;
   height: 100%;
   flex-shrink: 0;
-  font-size: 16px;
   line-height: 20px;
   display: flex;
   flex-direction: column;
