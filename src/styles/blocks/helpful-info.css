@@ -3,9 +3,13 @@
   height: 100%;
 }
 
+.helpful-info__title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
 .helpful-info__content {
   padding-top: 64px;
-  gap: 20px;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }

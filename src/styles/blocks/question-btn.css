@@ -1,0 +1,14 @@
+.question-btn {
+  width: 100%;
+  height: 60px;
+  background: #d9d9d9;
+  padding: 18px 32px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.question-btn__name {
+  font-size: 20px;
+  font-weight: 500;
+  align-self: center;
+}
