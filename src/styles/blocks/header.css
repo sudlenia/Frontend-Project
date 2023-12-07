@@ -1,6 +1,7 @@
 .header {
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
-  height: 80px;
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
@@ -9,7 +10,6 @@
 
 .header__content {
   display: flex;
-  width: 1258px;
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;

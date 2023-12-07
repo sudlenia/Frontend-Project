@@ -1,6 +1,5 @@
 .helpful-info {
   padding-top: 64px;
-  height: 100%;
 }
 
 .helpful-info__title {
@@ -12,4 +11,5 @@
   padding-top: 64px;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 20px;
 }

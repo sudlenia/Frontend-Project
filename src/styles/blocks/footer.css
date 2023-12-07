@@ -1,14 +1,15 @@
 .footer {
   display: flex;
-  height: 108px;
   flex-shrink: 0;
+  padding-top: 44px;
+  padding-bottom: 44px;
   background: #6a6a6a;
 }
 
 .footer__content {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .footer__text {
