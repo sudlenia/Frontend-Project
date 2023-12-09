@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  padding-top: 44px;
+  padding-bottom: 44px;
+  background: #6a6a6a;
+}
+
+.footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer__text {
+  color: #fff;
+  font-size: 11px;
+  text-align: right;
+  line-height: 20px; /* 181.818% */
+}

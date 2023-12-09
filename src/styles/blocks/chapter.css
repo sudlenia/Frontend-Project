@@ -1,0 +1,14 @@
+.chapter {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.chapter__title {
+  font-size: 24px;
+  line-height: 20px; /* 83.333% */
+}
+
+.chapter__text {
+  line-height: 20px; /* 125% */
+}
