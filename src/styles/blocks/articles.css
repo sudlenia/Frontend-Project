@@ -60,6 +60,7 @@
   }
 
   .articles__content {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
     padding-top: 40px;
     gap: 10px;
   }
@@ -83,7 +84,6 @@
   }
 
   .articles__content {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
     padding-top: 24px;
     gap: 10px;
   }

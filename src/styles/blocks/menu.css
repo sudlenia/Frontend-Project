@@ -49,7 +49,7 @@
     display: block;
   }
 
-  .submenu {
+  .menu__submenu {
     display: none;
     position: absolute;
     background: #1f2937;
@@ -62,7 +62,7 @@
     position: relative;
   }
 
-  .menu__droper:hover .submenu {
+  .menu__droper:hover .menu__submenu {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
