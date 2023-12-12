@@ -11,3 +11,15 @@
   font-weight: 700;
   padding-bottom: 6px;
 }
+
+@media (width < 1024px) {
+  .info__title {
+    font-size: 20px;
+  }
+}
+
+@media (width < 768px) {
+  .info__title {
+    font-size: 18px;
+  }
+}

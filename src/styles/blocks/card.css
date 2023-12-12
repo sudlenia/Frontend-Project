@@ -41,3 +41,43 @@
   font-size: 14px;
   line-height: 20px; /* 142.857% */
 }
+
+@media (width < 1024px) {
+  .card__content {
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .card__img {
+    height: 160px;
+  }
+
+  .card__title {
+    font-size: 18px;
+  }
+
+  .card__text {
+    font-size: 14px;
+  }
+
+  .card__footer {
+    padding-top: 14px;
+    font-size: 12px;
+  }
+}
+
+@media (width < 768px) {
+  .card__content {
+    gap: 6px;
+  }
+
+  .card {
+    min-height: 460px;
+  }
+}
+
+@media (width < 576px) {
+  .card {
+    min-height: 400px;
+  }
+}

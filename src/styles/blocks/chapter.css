@@ -12,3 +12,19 @@
 .chapter__text {
   line-height: 20px; /* 125% */
 }
+
+@media (width < 1024px) {
+  .chapter__title {
+    font-size: 20px;
+  }
+}
+
+@media (width < 768px) {
+  .chapter__title {
+    font-size: 18px;
+  }
+
+  .chapter__text {
+    font-size: 14px;
+  }
+}
