@@ -1,4 +1,4 @@
-import { changeClassOfCards, getClassOfActiveItem, createArticleHTML } from './utils.js';
+import { getViewClassOfActiveItem, createArticleHTML, addRowViewClassForCard } from './utils.js';
 
 const addBtn = document.querySelector('.button--add');
 const form = document.querySelector('.form');
@@ -32,9 +32,15 @@ createlBtn.addEventListener('click', () => {
   inputImg.value = '';
   textAreaDescr.value = '';
 
-  articles__content.innerHTML = createArticleHTML(card) + articles__content.innerHTML;
+  const newCard = createArticleHTML(card);
 
-  changeClassOfCards(getClassOfActiveItem());
+  articles__content.innerHTML = newCard + articles__content.innerHTML;
+
+  const newCardHTML = document.querySelector('.articles__content article');
+
+  if (getViewClassOfActiveItem() === 'switcher--row') {
+    addRowViewClassForCard(newCardHTML);
+  }
 
   addBtn.classList.remove('hidden');
   form.classList.add('hidden');

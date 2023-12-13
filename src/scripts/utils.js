@@ -48,22 +48,30 @@ export function createArticleHTML(article) {
   return card.outerHTML;
 }
 
-export function changeClassOfCards(classOfCards) {
-  const cards = document.querySelectorAll('.articles__content article');
+export function addRowViewClassForCard(card) {
+  card.classList.add('articles__card--row');
+  card.querySelector('.card__img').classList.add('card__img--row');
+}
 
-  cards.forEach((element) => {
-    if (classOfCards === 'switcher--row') {
-      element.classList.add('articles__card--row');
-      element.querySelector('.card__img').classList.add('card__img--row');
+function removeRowViewClassForCard(card) {
+  card.classList.remove('articles__card--row');
+  card.querySelector('.card__img').classList.remove('card__img--row');
+}
+
+export function changeViewClassForAllCards() {
+  const allCards = document.querySelectorAll('.articles__content article');
+
+  allCards.forEach((element) => {
+    if (getViewClassOfActiveItem() === 'switcher--row') {
+      addRowViewClassForCard(element);
     } else {
-      element.classList.remove('articles__card--row');
-      element.querySelector('.card__img').classList.remove('card__img--row');
+      removeRowViewClassForCard(element);
     }
   });
 }
 
-export function getClassOfActiveItem() {
-  let classOfActiveItem = localStorage.getItem('switcher')
+export function getViewClassOfActiveItem() {
+  const classOfActiveItem = localStorage.getItem('switcher')
     ? JSON.parse(localStorage.getItem('switcher'))
     : 'switcher--grid';
 

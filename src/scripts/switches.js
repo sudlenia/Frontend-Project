@@ -1,8 +1,8 @@
-import { changeClassOfCards, getClassOfActiveItem } from './utils.js';
+import { changeViewClassForAllCards, getViewClassOfActiveItem } from './utils.js';
 
 const switches = document.querySelector('.switches');
 
-let activeItem = switches.querySelector(`.${getClassOfActiveItem()}`);
+let activeItem = switches.querySelector(`.${getViewClassOfActiveItem()}`);
 
 if (activeItem) {
   activeItem.querySelector('path').classList.add('switcher--active');
@@ -25,6 +25,6 @@ switches.addEventListener('click', (event) => {
     localStorage.setItem('switcher', JSON.stringify(classOfTarget));
     activeItem = switches.querySelector(`.${classOfTarget}`);
 
-    changeClassOfCards(classOfTarget);
+    changeViewClassForAllCards();
   }
 });

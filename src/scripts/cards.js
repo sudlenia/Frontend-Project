@@ -1,5 +1,5 @@
 import { getArticles } from './requests.js';
-import { changeClassOfCards, getClassOfActiveItem, createArticleHTML } from './utils.js';
+import { changeViewClassForAllCards, createArticleHTML } from './utils.js';
 
 const articles__content = document.querySelector('.articles__content');
 
@@ -11,5 +11,5 @@ function renderArticles(data) {
     .map((article) => createArticleHTML(article))
     .join('');
 
-  changeClassOfCards(getClassOfActiveItem());
+  changeViewClassForAllCards();
 }
