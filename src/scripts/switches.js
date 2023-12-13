@@ -1,10 +1,11 @@
+import { changeClassOfCards, getClassOfActiveItem } from './utils.js';
+
 const switches = document.querySelector('.switches');
 
 let activeItem = switches.querySelector(`.${getClassOfActiveItem()}`);
 
 if (activeItem) {
   activeItem.querySelector('path').classList.add('switcher--active');
-  changeClassOfCards(getClassOfActiveItem());
 }
 
 switches.addEventListener('click', (event) => {
@@ -27,25 +28,3 @@ switches.addEventListener('click', (event) => {
     changeClassOfCards(classOfTarget);
   }
 });
-
-function changeClassOfCards(classOfCards) {
-  const cards = document.querySelectorAll('.articles__content article');
-
-  cards.forEach((element) => {
-    if (classOfCards === 'switcher--row') {
-      element.classList.add('articles__card--row');
-      element.querySelector('.card__img').classList.add('card__img--row');
-    } else {
-      element.classList.remove('articles__card--row');
-      element.querySelector('.card__img').classList.remove('card__img--row');
-    }
-  });
-}
-
-function getClassOfActiveItem() {
-  let classOfActiveItem = localStorage.getItem('switcher')
-    ? JSON.parse(localStorage.getItem('switcher'))
-    : 'switcher--grid';
-
-  return classOfActiveItem;
-}
