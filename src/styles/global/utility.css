@@ -26,6 +26,10 @@ button {
   margin-top: 100px;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (width < 1280px) {
   .container {
     max-width: 1024px;

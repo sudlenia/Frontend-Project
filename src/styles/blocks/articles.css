@@ -44,6 +44,10 @@
   min-height: 190px;
 }
 
+.articles__btn {
+  margin-top: 40px;
+}
+
 @media (width < 1024px) {
   .articles {
     padding-top: 60px;

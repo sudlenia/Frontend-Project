@@ -1,0 +1,14 @@
+.button {
+  align-self: center;
+  border: 1px solid #000;
+  background: #fcffe7;
+  padding: 9px 120px;
+}
+
+.button--white {
+  background: white;
+}
+
+.button--big {
+  padding: 9px 140px;
+}

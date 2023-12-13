@@ -1,0 +1,27 @@
+.form {
+  padding-left: 214px;
+  padding-right: 214px;
+  padding-top: 40px;
+}
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 36px;
+}
+
+.form__union {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form__title {
+  font-size: 18px;
+}
+
+.form__buttons {
+  display: flex;
+  justify-content: space-between;
+}
