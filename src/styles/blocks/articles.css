@@ -32,14 +32,16 @@
   gap: 15px;
 }
 
-.articles__btn {
-  margin-top: 40px;
-  align-self: center;
-  width: 404px;
-  height: 44px;
-  flex-shrink: 0;
-  border: 1px solid #000;
-  background: #fcffe7;
+.articles__card {
+  grid-column: span 4 / span 4;
+  flex-direction: column;
+  min-height: 520px;
+}
+
+.articles__card--row {
+  grid-column: span 12 / span 12;
+  flex-direction: row;
+  min-height: 190px;
 }
 
 @media (width < 1024px) {

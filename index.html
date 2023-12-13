@@ -121,10 +121,30 @@
     <section class="articles container">
       <header class="articles__header">
         <h2 class="articles__title">Интересные статьи</h2>
+        <div class="switches">
+          <svg class="switcher switcher--row" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+            <path
+              d="M8.5 6h13M8.5 12h13M8.5 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"
+              stroke="#000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg class="switcher switcher--grid" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+            <path
+              d="M10.5 3h-7v7h7V3ZM21.5 3h-7v7h7V3ZM21.5 14h-7v7h7v-7ZM10.5 14h-7v7h7v-7Z"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
         <p class="articles__text">Описать, о чём эти статьи, кратко</p>
       </header>
       <div class="articles__content">
-        <article class="card">
+        <article class="card articles__card">
           <img class="card__img" src="/images/Image.jpg" alt="" />
           <div class="card__content">
             <h3 class="card__title">Boost your conversion rate</h3>
@@ -135,7 +155,7 @@
             <footer class="card__footer">Mar 16, 2020 · 6 min read</footer>
           </div>
         </article>
-        <article class="card">
+        <article class="card articles__card">
           <img class="card__img" src="/images/Image1.jpg" alt="" />
           <div class="card__content">
             <h3 class="card__title">How to use search engine optimization to drive sales</h3>
@@ -146,7 +166,7 @@
             <footer class="card__footer">Mar 10, 2020 · 4 min read</footer>
           </div>
         </article>
-        <article class="card">
+        <article class="card articles__card">
           <img class="card__img" src="/images/Image2.jpg" alt="" />
           <div class="card__content">
             <h3 class="card__title">Improve your customer experience</h3>

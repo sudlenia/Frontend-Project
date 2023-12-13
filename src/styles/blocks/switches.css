@@ -1,0 +1,9 @@
+.switches {
+  display: inline-flex;
+  align-self: center;
+  gap: 16px;
+}
+
+.switcher--active {
+  stroke: red;
+}
