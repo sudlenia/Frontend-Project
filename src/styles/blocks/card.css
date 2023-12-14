@@ -1,19 +1,24 @@
 .card {
   display: flex;
+  flex-direction: column;
   border-radius: 8px;
   border: 1px solid #000;
   overflow: hidden;
+}
+
+.card--row {
+  flex-direction: row;
+}
+
+.card--row .card__img {
+  width: 350px;
+  height: 100%;
 }
 
 .card__img {
   height: 192px;
   flex-shrink: 0;
   object-fit: cover;
-}
-
-.card__img--row {
-  height: 250px;
-  width: 350px;
 }
 
 .card__content {

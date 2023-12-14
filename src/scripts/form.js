@@ -1,4 +1,4 @@
-import { getViewClassOfActiveItem, createArticleHTML, addRowViewClassForCard } from './utils.js';
+import { getDataViewOfActiveItem, createArticleHTML, addRowViewClassForCard } from './utils.js';
 
 const addBtn = document.querySelector('.button--add');
 const form = document.querySelector('.form');
@@ -38,7 +38,7 @@ createlBtn.addEventListener('click', () => {
 
   const newCardHTML = document.querySelector('.articles__content article');
 
-  if (getViewClassOfActiveItem() === 'switcher--row') {
+  if (getDataViewOfActiveItem() === 'row') {
     addRowViewClassForCard(newCardHTML);
   }
 

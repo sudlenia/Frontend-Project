@@ -124,24 +124,28 @@
       <header class="articles__header">
         <h2 class="articles__title">Интересные статьи</h2>
         <div class="switches">
-          <svg class="switcher switcher--row" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-            <path
-              d="M8.5 6h13M8.5 12h13M8.5 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"
-              stroke="#000"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <svg class="switcher switcher--grid" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-            <path
-              d="M10.5 3h-7v7h7V3ZM21.5 3h-7v7h7V3ZM21.5 14h-7v7h7v-7ZM10.5 14h-7v7h7v-7Z"
-              stroke="black"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+          <button class="switches__btn" data-view="row">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+              <path
+                d="M8.5 6h13M8.5 12h13M8.5 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button class="switches__btn" data-view="grid">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+              <path
+                d="M10.5 3h-7v7h7V3ZM21.5 3h-7v7h7V3ZM21.5 14h-7v7h7v-7ZM10.5 14h-7v7h7v-7Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
         <p class="articles__text">Описать, о чём эти статьи, кратко</p>
       </header>

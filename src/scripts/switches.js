@@ -1,29 +1,27 @@
-import { changeViewClassForAllCards, getViewClassOfActiveItem } from './utils.js';
+import { changeViewClassForAllCards, getDataViewOfActiveItem } from './utils.js';
 
 const switches = document.querySelector('.switches');
 
-let activeItem = switches.querySelector(`.${getViewClassOfActiveItem()}`);
+let activeItem = switches.querySelector(`[data-view="${getDataViewOfActiveItem()}"]`);
 
 if (activeItem) {
-  activeItem.querySelector('path').classList.add('switcher--active');
+  activeItem.classList.add('switches__btn--active');
 }
 
 switches.addEventListener('click', (event) => {
-  const target = event.target.closest('svg');
+  const target = event.target.closest('BUTTON');
 
-  if (target && target.tagName === 'svg') {
-    const pathOfActive = activeItem ? activeItem.querySelector('path') : null;
-
-    if (pathOfActive) {
-      pathOfActive.classList.remove('switcher--active');
+  if (target && target.tagName === 'BUTTON') {
+    if (activeItem) {
+      activeItem.classList.remove('switches__btn--active');
     }
 
-    target.querySelector('path').classList.add('switcher--active');
+    target.classList.add('switches__btn--active');
 
-    const classOfTarget = target.classList[1];
+    const viewOfTarget = target.dataset.view;
 
-    localStorage.setItem('switcher', JSON.stringify(classOfTarget));
-    activeItem = switches.querySelector(`.${classOfTarget}`);
+    localStorage.setItem('switch-view', viewOfTarget);
+    activeItem = switches.querySelector(`[data-view="${viewOfTarget}"]`);
 
     changeViewClassForAllCards();
   }

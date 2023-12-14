@@ -48,21 +48,23 @@ export function createArticleHTML(article) {
   return card.outerHTML;
 }
 
+const articles__content = document.querySelector('.articles__content');
+
 export function addRowViewClassForCard(card) {
-  card.classList.add('articles__card--row');
-  card.querySelector('.card__img').classList.add('card__img--row');
+  articles__content.classList.add('articles__content--row');
+  card.classList.add('card--row');
 }
 
 function removeRowViewClassForCard(card) {
-  card.classList.remove('articles__card--row');
-  card.querySelector('.card__img').classList.remove('card__img--row');
+  articles__content.classList.remove('articles__content--row');
+  card.classList.remove('card--row');
 }
 
 export function changeViewClassForAllCards() {
-  const allCards = document.querySelectorAll('.articles__content article');
+  const allCards = articles__content.querySelectorAll('article');
 
   allCards.forEach((element) => {
-    if (getViewClassOfActiveItem() === 'switcher--row') {
+    if (getDataViewOfActiveItem() === 'row') {
       addRowViewClassForCard(element);
     } else {
       removeRowViewClassForCard(element);
@@ -70,10 +72,8 @@ export function changeViewClassForAllCards() {
   });
 }
 
-export function getViewClassOfActiveItem() {
-  const classOfActiveItem = localStorage.getItem('switcher')
-    ? JSON.parse(localStorage.getItem('switcher'))
-    : 'switcher--grid';
+export function getDataViewOfActiveItem() {
+  const viewOfActiveItem = localStorage.getItem('switch-view') || 'grid';
 
-  return classOfActiveItem;
+  return viewOfActiveItem;
 }
