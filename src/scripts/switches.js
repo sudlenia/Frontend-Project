@@ -9,20 +9,18 @@ if (activeItem) {
 }
 
 switches.addEventListener('click', (event) => {
-  const target = event.target.closest('BUTTON');
+  const target = event.target.closest('.switches__btn');
 
-  if (target && target.tagName === 'BUTTON') {
-    if (activeItem) {
-      activeItem.classList.remove('switches__btn--active');
-    }
-
-    target.classList.add('switches__btn--active');
-
-    const viewOfTarget = target.dataset.view;
-
-    localStorage.setItem('switch-view', viewOfTarget);
-    activeItem = switches.querySelector(`[data-view="${viewOfTarget}"]`);
-
-    changeViewClassForAllCards();
+  if (activeItem) {
+    activeItem.classList.remove('switches__btn--active');
   }
+
+  target.classList.add('switches__btn--active');
+
+  const viewOfTarget = target.dataset.view;
+
+  localStorage.setItem('switch-view', viewOfTarget);
+  activeItem = target;
+
+  changeViewClassForAllCards();
 });

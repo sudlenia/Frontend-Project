@@ -1,13 +1,13 @@
 export function createArticleHTML(article) {
   const articleInfo = {
     title: article.title ? (article.title.rendered ? article.title.rendered : article.title) : article.title,
-    img: article.jetpack_featured_media_url ? article.jetpack_featured_media_url : article.img,
+    img: article.jetpack_featured_media_url || article.img,
     descr: article.excerpt
       ? article.excerpt.rendered
         ? article.excerpt.rendered.replace(/<\/?p>/g, '')
         : article.descr
       : article.descr,
-    date: article.date ? article.date : new Date(),
+    date: article.date || new Date(),
   };
 
   const card = document.createElement('article');
@@ -27,7 +27,7 @@ export function createArticleHTML(article) {
 
   const card__text = document.createElement('p');
   card__text.classList.add('card__text');
-  card__text.innerHTML = articleInfo.descr;
+  card__text.textContent = articleInfo.descr;
 
   const card__footer = document.createElement('footer');
   card__footer.classList.add('card__footer');
@@ -63,8 +63,10 @@ function removeRowViewClassForCard(card) {
 export function changeViewClassForAllCards() {
   const allCards = articles__content.querySelectorAll('article');
 
+  const view = getDataViewOfActiveItem();
+
   allCards.forEach((element) => {
-    if (getDataViewOfActiveItem() === 'row') {
+    if (view === 'row') {
       addRowViewClassForCard(element);
     } else {
       removeRowViewClassForCard(element);

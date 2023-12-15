@@ -1,14 +1,19 @@
 .form {
-  padding-left: 214px;
-  padding-right: 214px;
   padding-top: 40px;
 }
 
 .form__wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.form__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 36px;
+  grid-column: span 10 / span 10;
+  grid-column-start: 2;
 }
 
 .form__union {
@@ -24,4 +29,8 @@
 .form__buttons {
   display: flex;
   justify-content: space-between;
+}
+
+.form__input {
+  height: 44px;
 }

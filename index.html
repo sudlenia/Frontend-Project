@@ -163,33 +163,35 @@
         </article> -->
       </div>
       <button type="button" class="button button--big articles__btn button--add">Добавить</button>
-      <section class="form hidden">
+      <footer class="form hidden">
         <div class="form__wrapper">
-          <div class="form__union">
-            <label class="form__title" for="title">Название статьи</label>
-            <input class="form__input form__input--title" id="title" name="title" type="text" />
-          </div>
-          <div class="form__union">
-            <label class="form__title" for="img">Ссылка на картинку</label>
-            <input class="form__input form__input--img" id="img" name="img" type="text" />
-          </div>
-          <div class="form__union">
-            <label class="form__title" for="descr">Описание</label>
-            <textarea
-              class="form__textarea form__textarea--descr"
-              id="descr"
-              name="descr"
-              type="text"
-              maxlength="320"
-              rows="5"
-            ></textarea>
-          </div>
-          <div class="form__buttons">
-            <button class="button button--white button--cancel">Отмена</button>
-            <button class="button button--create">Создать</button>
+          <div class="form__content">
+            <div class="form__union">
+              <label class="form__title" for="title">Название статьи</label>
+              <input class="form__input form__input--title" id="title" name="title" type="text" maxlength="100" />
+            </div>
+            <div class="form__union">
+              <label class="form__title" for="img">Ссылка на картинку</label>
+              <input class="form__input form__input--img" id="img" name="img" type="text" />
+            </div>
+            <div class="form__union">
+              <label class="form__title" for="descr">Описание</label>
+              <textarea
+                class="form__textarea form__textarea--descr"
+                id="descr"
+                name="descr"
+                type="text"
+                maxlength="320"
+                rows="5"
+              ></textarea>
+            </div>
+            <div class="form__buttons">
+              <button class="button button--white button--cancel">Отмена</button>
+              <button class="button button--create">Создать</button>
+            </div>
           </div>
         </div>
-      </section>
+      </footer>
     </section>
 
     <footer class="footer indent-100">
