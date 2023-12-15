@@ -81,10 +81,18 @@
   .card {
     min-height: 460px;
   }
+
+  .card--row .card__img {
+    width: 300px;
+  }
 }
 
 @media (width < 576px) {
   .card {
     min-height: 400px;
+  }
+
+  .card--row .card__img {
+    width: 240px;
   }
 }
