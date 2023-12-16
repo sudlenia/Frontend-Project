@@ -59,12 +59,18 @@
     height: 160px;
   }
 
+  .card--row .card__img {
+    width: 280px;
+  }
+
   .card__title {
     font-size: 18px;
   }
 
   .card__text {
     font-size: 14px;
+    height: 122px;
+    overflow: hidden;
   }
 
   .card__footer {
@@ -75,7 +81,7 @@
 
 @media (width < 768px) {
   .card__content {
-    gap: 6px;
+    gap: 0;
   }
 
   .card {
@@ -83,10 +89,15 @@
   }
 
   .card--row .card__img {
-    width: 300px;
+    width: 240px;
+  }
+
+  .card__title {
+    font-size: 16px;
   }
 
   .card__text {
+    font-size: 12px;
     height: 122px;
     overflow: hidden;
   }
@@ -94,6 +105,10 @@
   .card--row .card__text {
     height: 88px;
     overflow: hidden;
+  }
+
+  .card__footer {
+    font-size: 10px;
   }
 }
 
@@ -103,15 +118,15 @@
   }
 
   .card--row .card__img {
-    width: 240px;
+    width: 160px;
+  }
+
+  .card__title {
+    font-size: 14px;
   }
 
   .card--row .card__text {
     height: 72px;
     overflow: hidden;
-  }
-
-  .card__footer {
-    width: 80px;
   }
 }
