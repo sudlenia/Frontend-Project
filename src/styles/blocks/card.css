@@ -85,6 +85,16 @@
   .card--row .card__img {
     width: 300px;
   }
+
+  .card__text {
+    height: 122px;
+    overflow: hidden;
+  }
+
+  .card--row .card__text {
+    height: 88px;
+    overflow: hidden;
+  }
 }
 
 @media (width < 576px) {
@@ -94,5 +104,10 @@
 
   .card--row .card__img {
     width: 240px;
+  }
+
+  .card--row .card__text {
+    height: 66px;
+    overflow: hidden;
   }
 }
