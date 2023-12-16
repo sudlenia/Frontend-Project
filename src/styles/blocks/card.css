@@ -107,7 +107,11 @@
   }
 
   .card--row .card__text {
-    height: 66px;
+    height: 72px;
     overflow: hidden;
+  }
+
+  .card__footer {
+    width: 80px;
   }
 }
