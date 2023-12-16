@@ -1,3 +1,5 @@
+const formattedDate = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
 export function createArticleHTML(article) {
   const articleInfo = {
     title: article.title ? (article.title.rendered ? article.title.rendered : article.title) : article.title,
@@ -32,20 +34,19 @@ export function createArticleHTML(article) {
   const card__footer = document.createElement('footer');
   card__footer.classList.add('card__footer');
 
-  const formattedDate = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).format(
-    new Date(`${articleInfo.date}`),
-  );
-
   function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
   }
 
-  card__footer.textContent = `${formattedDate} · ${getRandomNumber(1, 15)} min read`;
+  card__footer.textContent = `${formattedDate.format(new Date(`${articleInfo.date}`))} · ${getRandomNumber(
+    1,
+    15,
+  )} min read`;
 
   card__content.append(card__title, card__text, card__footer);
   card.append(card__img, card__content);
 
-  return card.outerHTML;
+  return card;
 }
 
 const articles__content = document.querySelector('.articles__content');

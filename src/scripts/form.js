@@ -34,9 +34,9 @@ createlBtn.addEventListener('click', () => {
 
   const newCard = createArticleHTML(card);
 
-  articles__content.innerHTML = newCard + articles__content.innerHTML;
+  articles__content.prepend(newCard);
 
-  const newCardHTML = document.querySelector('.articles__content article');
+  const newCardHTML = document.querySelector('.card');
 
   if (getDataViewOfActiveItem() === 'row') {
     addRowViewClassForCard(newCardHTML);

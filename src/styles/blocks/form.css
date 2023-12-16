@@ -12,8 +12,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 36px;
-  grid-column: span 10 / span 10;
-  grid-column-start: 2;
+  grid-column: 3 / 11;
 }
 
 .form__union {

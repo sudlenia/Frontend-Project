@@ -6,10 +6,8 @@ const articles__content = document.querySelector('.articles__content');
 getArticles().then(renderArticles);
 
 function renderArticles(data) {
-  articles__content.innerHTML = data
-    .slice(0, 6)
-    .map((article) => createArticleHTML(article))
-    .join('');
+  const article_items = data.slice(0, 6).map((article) => createArticleHTML(article));
+  articles__content.append(...article_items);
 
   changeViewClassForAllCards();
 }
