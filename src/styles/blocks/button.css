@@ -1,0 +1,36 @@
+.button {
+  align-self: center;
+  border: 1px solid #000;
+  background: #fcffe7;
+  padding: 9px 120px;
+}
+
+.button--white {
+  background: white;
+}
+
+.button--big {
+  padding: 9px 140px;
+}
+
+@media (width < 768px) {
+  .button {
+    padding: 7px 80px;
+    font-size: 14px;
+  }
+
+  .button--big {
+    padding: 7px 90px;
+  }
+}
+
+@media (width < 576px) {
+  .button {
+    padding: 7px 30px;
+    font-size: 12px;
+  }
+
+  .button--big {
+    padding: 7px 60px;
+  }
+}
