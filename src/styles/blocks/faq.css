@@ -33,17 +33,13 @@
 
 .svg--rotate {
   transform: rotate(180deg);
+  transition-duration: 0.5s;
 }
 
 .faq__btn:hover {
   transition: 0.5s ease-in-out;
   background: #bbb;
   stroke-dashoffset: -480;
-}
-
-.faq__btn:hover .svg--arrow {
-  transform: rotate(180deg);
-  transition-duration: 0.5s;
 }
 
 .faq__name {
