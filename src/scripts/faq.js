@@ -1,23 +1,23 @@
-const questions = document.querySelector('.faq__questions');
+const questions = document.querySelectorAll('.faq__question');
 
-let activeItem = questions.querySelector('#question_1');
+let activeItem = document.querySelector('.faq__questions #question_1');
 
-questions.addEventListener('click', (event) => {
-  const target = event.target.closest('.faq__question');
-  const targetID = getID(target);
-  const activeID = getID(activeItem);
+questions.forEach((question) => {
+  question.addEventListener('click', (event) => {
+    const target = event.currentTarget;
+    const targetID = getID(target);
+    const activeID = getID(activeItem);
 
-  if (target != activeItem) {
-    activeItem.querySelector('.svg--arrow-up').classList.add('hidden');
-    activeItem.querySelector('.svg--arrow-down').classList.remove('hidden');
-    questions.querySelector(`#answer_${activeID}`).classList.add('hidden');
+    if (target !== activeItem) {
+      activeItem.querySelector('.svg--arrow').classList.remove('svg--rotate');
+      document.querySelector(`#answer_${activeID}`).classList.add('hidden');
 
-    activeItem = target;
+      activeItem = target;
 
-    activeItem.querySelector('.svg--arrow-up').classList.remove('hidden');
-    activeItem.querySelector('.svg--arrow-down').classList.add('hidden');
-    questions.querySelector(`#answer_${targetID}`).classList.remove('hidden');
-  }
+      activeItem.querySelector('.svg--arrow').classList.add('svg--rotate');
+      document.querySelector(`#answer_${targetID}`).classList.remove('hidden');
+    }
+  });
 });
 
 function getID(item) {
