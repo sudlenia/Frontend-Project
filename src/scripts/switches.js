@@ -11,16 +11,20 @@ if (activeItem) {
 switches.addEventListener('click', (event) => {
   const target = event.target.closest('.switches__btn');
 
-  if (activeItem) {
+  if (target) {
     activeItem.classList.remove('switches__btn--active');
+
+    if (activeItem) {
+      activeItem.classList.remove('switches__btn--active');
+    }
+
+    target.classList.add('switches__btn--active');
+
+    const viewOfTarget = target.dataset.view;
+
+    localStorage.setItem('switch-view', viewOfTarget);
+    activeItem = target;
+
+    changeViewClassForAllCards();
   }
-
-  target.classList.add('switches__btn--active');
-
-  const viewOfTarget = target.dataset.view;
-
-  localStorage.setItem('switch-view', viewOfTarget);
-  activeItem = target;
-
-  changeViewClassForAllCards();
 });
