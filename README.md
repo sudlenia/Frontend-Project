@@ -1,2 +1,1 @@
-# Дуденко И.А. КИ21-22Б
-# Рагейшес И.С. КИ21-22Б
+https://sudlenia.github.io/frontend-project/)https://sudlenia.github.io/frontend-project/
